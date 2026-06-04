@@ -5,6 +5,8 @@
     --color-white: #FFFFFF;
     --color-bg: #F8F9FA;
     --color-text: #333333;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
 }
 
 * {
@@ -14,10 +16,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-body);
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
+}
+
+h1, h2, h3, .logo-container h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
 }
 
 /* --- LEPKI NAGŁÓWEK (Sticky) --- */
@@ -82,12 +89,179 @@ nav a:hover {
     color: var(--color-red);
 }
 
+/* --- PRZYCISKI (Buttons) --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #d11d4d; /* ciemniejszy czerwony */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(179, 25, 66, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* --- SEKCJA DOŁĄCZ --- */
+.join-section {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 6rem 5%;
+    margin-bottom: 6rem;
+    border-radius: 50px;
+}
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.join-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.join-benefits {
+    list-style: none;
+}
+
+.join-benefits li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.join-benefits li span {
+    color: var(--color-red);
+    font-size: 1.5rem;
+}
+
+.join-form-card {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-blue);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.form-checkbox {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.form-checkbox input {
+    margin-top: 3px;
+}
+
+.form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
 /* --- GŁÓWNA ZAWARTOŚĆ --- */
 main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 0 auto; /* Usunięto margines górny by hero dotykało nagłówka */
     padding: 0 5%;
-    min-height: 70vh; /* by stopka nie skakała wysoko na krótkich stronach */
+    min-height: 70vh;
+}
+
+/* --- SEKCJA HERO --- */
+.hero-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(10, 49, 97, 0.05), rgba(255, 255, 255, 0));
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    color: #555;
 }
 
 /* Klasyczny układ podstrony */
@@ -118,41 +292,360 @@ main {
     margin-bottom: 1.5rem;
 }
 
+/* --- SEKCJA OPISU (Misja) --- */
+.description-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 6rem; /* 6rem odstępu na dole */
+    padding: 0 1rem;
+}
+
+.description-section h2 {
+    color: var(--color-blue);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.description-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-red);
+    border-radius: 2px;
+}
+
+.description-section p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.8;
+}
+
 /* Sekcja z aktualnościami (na głównej) */
 .news-section h2 {
-    color: var(--color-red);
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 0.5rem;
+    color: var(--color-blue);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 25px;
 }
 
 .news-card {
     background-color: var(--color-white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    border-top: 4px solid var(--color-blue);
-    transition: transform 0.2s ease;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: none; /* Usuwamy prostą kreskę na rzecz nowoczesnego stylu */
+    border-left: 4px solid var(--color-blue);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Wariacje Bento Grid */
+.news-card.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, var(--color-white) 60%, rgba(10, 49, 97, 0.05));
+}
+
+.news-card.wide {
+    grid-column: span 2;
 }
 
 .news-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left-color: var(--color-red);
+}
+
+.news-card h3 {
+    color: var(--color-blue);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.news-card .date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.news-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    color: var(--color-red);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    gap: 10px;
 }
 
 /* --- STOPKA --- */
 footer {
     background-color: var(--color-blue);
     color: var(--color-white);
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+    padding: 3rem 5% 2rem;
+    margin-top: 6rem;
     border-top: 5px solid var(--color-red);
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px; /* Zmniejszono szerokość dla 2 kolumn */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dokładnie dwie kolumny obok siebie */
+    gap: 100px; /* Duży odstęp między MENU a KONTAKT */
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.footer-section {
+    width: 100%;
+}
+
+.footer-section h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--color-red);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-red);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom .social-icons {
+    margin-top: 0; /* Usuwamy górny margines, bo gap w rodzicu załatwia sprawę */
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* --- SEKCJA FILARY (Home Page) --- */
+.pillars-section {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px; /* Zmniejszono szerokość kontenera */
+    margin: 0 auto;
+}
+
+.pillar-card {
+    text-align: center;
+    padding: 1.5rem; /* Zmniejszono padding */
+    background-color: var(--color-white);
+    border-radius: 12px; /* Mniejszy promień */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--color-red);
+}
+
+.pillar-card i {
+    font-size: 2rem; /* Zmniejszono ikony */
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+}
+
+.pillar-card h3 {
+    font-size: 1.1rem; /* Zmniejszono nagłówki */
+    margin-bottom: 0.8rem;
+    color: var(--color-blue);
+}
+
+.pillar-card p {
+    font-size: 0.85rem; /* Zmniejszono tekst */
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- SEKCJA DOKUMENTY --- */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.doc-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+}
+
+.doc-card i {
+    font-size: 3rem;
+    color: var(--color-red);
+    margin-bottom: 1.5rem;
+}
+
+.doc-card h3 {
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+}
+
+.doc-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* --- SEKCJA STRUKTURY --- */
+.coming-soon-card {
+    background-color: var(--color-white);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 2px dashed #ddd;
+}
+
+/* --- RESPONSyWNOŚĆ (TELEFON) --- */
+.donation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.donation-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--color-red);
+}
+
+.bank-details {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.bank-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- SEKCJA KONTAKT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.contact-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-blue);
 }
 
 /* --- RESPONSyWNOŚĆ (TELEFON) --- */
@@ -184,5 +677,69 @@ footer {
 
     nav a {
         font-size: 0.75rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+    }
+
+    /* Formularz na Mobile */
+    .join-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .join-benefits li {
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .join-section {
+        padding: 4rem 1rem;
+        border-radius: 20px;
+    }
+
+    /* Bento Grid na Mobile */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card.featured, .news-card.wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* Stopka na Mobile */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Darowizny na Mobile */
+    .donation-container {
+        grid-template-columns: 1fr;
     }
 }
