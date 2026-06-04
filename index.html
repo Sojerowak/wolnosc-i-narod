@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolność i Naród - Stowarzyszenie</title>
+    <title>Wolność i Naród - Stowarzyszenie Nowoczesnych Narodowców</title>
+    
+    <!-- SEO & META TAGS -->
+    <meta name="description" content="Stowarzyszenie Wolność i Naród - zrzeszamy nowoczesnych narodowców. Walczymy o silną, wolną i suwerenną Polskę. Dołącz do nas!">
+    <meta name="keywords" content="Wolność i Naród, narodowcy, stowarzyszenie, prawica, Polska, wolność, suwerenność">
+    <meta name="author" content="Stowarzyszenie Wolność i Naród">
+    
+    <!-- OPEN GRAPH (Social Media) -->
+    <meta property="og:title" content="Wolność i Naród - Stowarzyszenie">
+    <meta property="og:description" content="Walczymy o silną, wolną i suwerenną Polskę. Poznaj nasze cele i dołącz do ruchu.">
+    <meta property="og:image" content="img/wolnosc_i_narod_orzel.png">
+    <meta property="og:url" content="https://wolnoscinarod.pl/">
+    <meta property="og:type" content="website">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ICONS (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,62 +39,112 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#strona-glowna">Strona Główna</a></li>
-                <li><a href="#o-nas">O Stowarzyszeniu</a></li>
-                <li><a href="#aktualnosci">Aktualności</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="o-nas.html">O Nas</a></li>
+                <li><a href="struktury.html">Struktury</a></li>
+                <li><a href="aktualnosci.html">Aktualności</a></li>
+                <li><a href="dokumenty.html">Dokumenty</a></li>
+                <li><a href="dolacz.html">Dołącz</a></li>
+                <li><a href="darowizny.html">Darowizny</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- SEKCJA OPISU -->
-        <section id="o-nas" class="description-section">
-            <h2>Kim jesteśmy?</h2>
-            <p>
-                Stowarzyszenie <strong>Wolność i Naród</strong> to organizacja zrzeszająca nowoczesnych narodowców
-                <em>
-                Wierzymy w Polskę silną wolnością, odpowiedzialną, narodową i suwerennością. Stoimy na straży prawa do życia, własności, bezpieczeństwa obywateli oraz nienaruszalnych granic państwa. Chcemy państwa, które chroni ludzi zamiast ich ograniczać — z niższymi podatkami, wolnym rynkiem i szacunkiem dla pracy oraz przedsiębiorczości.
-                .</em>
-            </p>
+        <!-- SEKCJA HERO: Pierwsze wrażenie -->
+        <section id="strona-glowna" class="hero-section">
+            <div class="hero-content">
+                <h1>Wolność, Naród, Suwerenność</h1>
+                <p>
+                    Stowarzyszenie <strong>Wolność i Naród</strong> to organizacja zrzeszająca nowoczesnych narodowców.
+                    Wierzymy w Polskę silną wolnością, odpowiedzialną, narodową i suwerenną. Stoimy na straży prawa do życia, własności, bezpieczeństwa obywateli oraz nienaruszalnych granic państwa. Chcemy państwa, które chroni ludzi zamiast ich ograniczać — z niższymi podatkami, wolnym rynkiem i szacunkiem dla pracy oraz przedsiębiorczości.
+                </p>
+                <div class="hero-buttons">
+                    <a href="dolacz.html" class="btn btn-primary">Dołącz do nas</a>
+                    <a href="o-nas.html" class="btn btn-secondary">Poznaj nasz program</a>
+                </div>
+            </div>
         </section>
 
-        <!-- SEKCJA AKTUALNOŚCI -->
-        <section id="aktualnosci" class="news-section">
-            <h2>Najnowsze Aktualności</h2>
+        <!-- SEKCJA FILARY: Zamiast pełnych aktualności -->
+        <section class="pillars-section">
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Wolność Gospodarcza</h3>
+                    <p>Walczymy o niskie podatki i uproszczenie przepisów dla polskich przedsiębiorców.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-flag"></i>
+                    <h3>Suwerenność Narodowa</h3>
+                    <p>Polska musi być silnym państwem, które samodzielnie decyduje o swoim losie.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Wspólnota i Tradycja</h3>
+                    <p>Chronimy wartości, które od wieków stanowią o sile naszego narodu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKRÓCONA SEKCJA AKTUALNOŚCI NA STRONIE GŁÓWNEJ -->
+        <section class="news-section">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Najnowsze z życia stowarzyszenia</h2>
             <div class="news-grid">
-                
-                <!-- Pojedynczy wpis (karta) -->
-                <article class="news-card">
-                    <h3>Testowy Test</h3>
-                    <p class="date">1 Czerwca 2026</p>
-                    <p>Krótkie streszczenie najważniejszych informacji z ostatniego spotkania lub wydarzenia, które zorganizowaliście...</p>
-                    <a href="#czytaj-dalej" class="read-more">Czytaj dalej &rarr;</a>
+                <!-- Tylko dwie najważniejsze karty jako podgląd -->
+                <article class="news-card featured">
+                    <div>
+                        <p class="date">4 Czerwca 2026</p>
+                        <h3>Nowoczesny Patriotyzm: Nasza wizja na nadchodzące lata</h3>
+                        <p>Opracowaliśmy kompleksowy plan rozwoju, który łączy tradycyjne wartości narodowe z wyzwaniami nowoczesnej gospodarki...</p>
+                    </div>
+                    <a href="aktualnosci.html" class="read-more">Czytaj więcej &rarr;</a>
                 </article>
 
-                <!-- Pojedynczy wpis (karta) -->
                 <article class="news-card">
-                    <h3>Nowy projekt statutowy</h3>
-                    <p class="date">1 Czerwca 2026</p>
-                    <p>Powstał pierwszy projekt statutu stowarzyszenia, zapraszamy do sprawdzenia...</p>
-                    <a href="#czytaj-dalej" class="read-more">Czytaj dalej &rarr;</a>
+                    <div>
+                        <p class="date">1 Czerwca 2026</p>
+                        <h3>Nowy projekt statutowy</h3>
+                        <p>Powstał pierwszy projekt statutu stowarzyszenia. Zapraszamy do sprawdzenia szczegółów...</p>
+                    </div>
+                    <a href="aktualnosci.html" class="read-more">Szczegóły &rarr;</a>
                 </article>
-
-                <!-- Pojedynczy wpis (karta) -->
-                <article class="news-card">
-                    <h3>Wydarzenie historyczne</h3>
-                    <p class="date">1 Września 2026</p>
-                    <p>Oddziały niemieckie przekroczyły granice Polską, łamiąc pakt o nieagresji..</p>
-                    <a href="#czytaj-dalej" class="read-more">Czytaj dalej &rarr;</a>
-                </article>
-
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="aktualnosci.html" class="btn btn-secondary">Zobacz wszystkie aktualności</a>
             </div>
         </section>
     </main>
 
-    <!-- STOPKA -->
     <footer>
-        <p>&copy; 2026 Stowarzyszenie Wolność i Naród. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Menu</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="o-nas.html">O Nas</a></li>
+                    <li><a href="aktualnosci.html">Aktualności</a></li>
+                    <li><a href="dolacz.html">Dołącz do nas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul class="footer-links">
+                    <li><a href="darowizny.html">Darowizny</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="mailto:wolnoscinarod.win@gmail.com">wolnoscinarod.win@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@Wolnosc_i_Narod" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/Wolnosc_i_Narod" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/wolnosc_i_narod.win/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2026 Stowarzyszenie Wolność i Naród. Wszelkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 
 </body>
