@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dołącz do nas - Wolność i Naród</title>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ICONS (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-placeholder">
+                   <img src="img/wolnosc_i_narod_orzel.png" width="100%" height="100%">
+                </div>
+                <h1>Wolność i Naród</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="o-nas.html">O Nas</a></li>
+                <li><a href="struktury.html">Struktury</a></li>
+                <li><a href="aktualnosci.html">Aktualności</a></li>
+                <li><a href="dokumenty.html">Dokumenty</a></li>
+                <li><a href="dolacz.html">Dołącz</a></li>
+                <li><a href="darowizny.html">Darowizny</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Rekrutacja</h2>
+        </section>
+
+        <section class="join-section">
+            <div class="join-container">
+                <div class="join-text">
+                    <h2>Zostań członkiem</h2>
+                    <p>Zostań częścią ruchu, który zmienia Polskę. Wypełnij krótki formularz, a nasz koordynator skontaktuje się z Tobą w ciągu 48 godzin.</p>
+                    <ul class="join-benefits">
+                        <li><span>&check;</span> Realny wpływ na lokalną politykę</li>
+                        <li><span>&check;</span> Udział w zamkniętych szkoleniach i spotkaniach</li>
+                        <li><span>&check;</span> Dostęp do materiałów eksperckich</li>
+                    </ul>
+                </div>
+                <div class="join-form-card">
+                    <form id="join-form">
+                        <div class="form-group">
+                            <label for="full-name">Imię i Nazwisko</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="np. Jan Kowalski" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="twoj@email.pl" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="123 456 789" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Miasto</label>
+                                <input type="text" id="city" name="city" placeholder="np. Warszawa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="voivodeship">Województwo</label>
+                                <select id="voivodeship" name="voivodeship" required>
+                                    <option value="" disabled selected>Wybierz...</option>
+                                    <option value="dolnoslaskie">Dolnośląskie</option>
+                                    <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                                    <option value="lubelskie">Lubelskie</option>
+                                    <option value="lubuskie">Lubuskie</option>
+                                    <option value="lodzkie">Łódzkie</option>
+                                    <option value="malopolskie">Małopolskie</option>
+                                    <option value="mazowieckie">Mazowieckie</option>
+                                    <option value="opolskie">Opolskie</option>
+                                    <option value="podkarpackie">Podkarpackie</option>
+                                    <option value="podlaskie">Podlaskie</option>
+                                    <option value="pomorskie">Pomorskie</option>
+                                    <option value="slaskie">Śląskie</option>
+                                    <option value="swietokrzyskie">Świętokrzyskie</option>
+                                    <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+                                    <option value="wielkopolskie">Wielkopolskie</option>
+                                    <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Dlaczego chcesz do nas dołączyć? (opcjonalnie)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Opisz krótko swoje zainteresowania lub doświadczenie..."></textarea>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="rodo" name="rodo" required>
+                            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu związanego z działalnością stowarzyszenia.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Wyślij zgłoszenie</button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Menu</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="o-nas.html">O Nas</a></li>
+                    <li><a href="aktualnosci.html">Aktualności</a></li>
+                    <li><a href="dolacz.html">Dołącz do nas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul class="footer-links">
+                    <li><a href="darowizny.html">Darowizny</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="mailto:wolnoscinarod.win@gmail.com">wolnoscinarod.win@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@Wolnosc_i_Narod" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/Wolnosc_i_Narod" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/wolnosc_i_narod.win/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2026 Stowarzyszenie Wolność i Naród. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('join-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            status.textContent = "Wysyłanie...";
+            status.style.color = "var(--color-blue)";
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyvZlTDMEWdmOKT7TwYzARNB_UC0NksCmSx0G-6rtE44hJ8FShhlMzYPytwKUOFmsJr/exec';
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: JSON.stringify(data),
+                mode: 'no-cors'
+            })
+            .then(() => {
+                status.textContent = "Dziękujemy! Twoje zgłoszenie zostało wysłane.";
+                status.style.color = "green";
+                form.reset();
+            })
+            .catch(error => {
+                status.textContent = "Wystąpił błąd. Spróbuj ponownie później.";
+                status.style.color = "var(--color-red)";
+            });
+        });
+    </script>
+</body>
+</html>
