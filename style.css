@@ -726,6 +726,17 @@ footer {
         grid-row: span 1;
     }
 
+    /* Naprawa kafelków Filary Ideowe na Mobile */
+    .pillars-grid {
+        grid-template-columns: 1fr; /* Jeden pod drugim */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .pillar-card {
+        padding: 1.2rem;
+    }
+
     /* Stopka na Mobile */
     .footer-content {
         display: flex;
